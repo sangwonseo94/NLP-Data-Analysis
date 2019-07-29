@@ -1,0 +1,57 @@
+마크다운
+# 큰제목
+## 중간제목
+### 작은제목
+**내용** 내용을 굵게만들어줌
+> 인덴테이션
+[] =>  URL 넣어주기
+$ 수식
+
+마크다운 -> .md 파일 
+
+![]() <= img 파일
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+			   Markdown 예제
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+a guide to colab markdown
+===
+a guide to colab markdown
+==
+
+### #\#\#a guide to colab markdown
+### \#\** _itatics_
+
+~~strikethrough~~
+
+> \''monospace'\'
+
+## a guide to colab markdown
+### a guide to colab markdown
+
+## 항목
+
+1. ?
+2. ??
+
+1. 1 one
+1. 1 two
+1. 1 three
+
+>$y=x^2$
+
+>$e^(i\pi)+1=0$
+
+>$A_{m,n} =
+\begin{pmatrix}
+a_{1,1}& \cdots&a_{1,n}\\
+a_{2,1}& \cdots&a_{2,n}\\
+\vdots & \ddots& \vdots\\
+a_{m,1}& \cdots&a_{m,n}
+\end{pmatrix}$
+
+first column name | second column name
+--- | ---
+Row 1. Col 1 | Row 1. Col 2
+Row 2. Col 1 | Row 2. Col 2

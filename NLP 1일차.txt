@@ -1,0 +1,33 @@
+파이썬 데이터 사이언스 핸드북 
+
+머신러닝 -> 인간의 데이터 처리용이
+딥러닝 ->cnn,nlp 처리용이
+
+------------
+환경 : Jupyter notebook (Ipython 기능 포함), google colab
+
+가상환경 구축 conda create -n 가상환경이름 python=3.xxx [설치할 패키지이름]
+이후 activate 가상환경이름
+비활성화 deactivate
+삭제 : conda remove --n 가상환경이름 --all
+
+패키지설치 -> 가상환경 활성화후 설치 (안하면 base에 설치된다.)
+
+conda => 호환성을 검증한다음에 배포하기때문에 pip 보다는 conda 를이용하자
+local은 token값으로 !
+
+
+통합개발환경 = spyder
+
+kernel = python interpreter
+
+shift+tab = help
+tab= 자동완성
+?? 명령어 -> 아래나옴 
+
+마크다운
+# 큰제목
+## 중간제목
+### 작은제목
+**내용** 내용을 굵게만들어줌
+ 
