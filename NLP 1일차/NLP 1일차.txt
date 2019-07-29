@@ -24,3 +24,10 @@ kernel = python interpreter
 shift+tab = help
 tab= 자동완성
 ?? 명령어 -> 아래나옴 
+
+마크다운
+# 큰제목
+## 중간제목
+### 작은제목
+**내용** 내용을 굵게만들어줌
+ 
