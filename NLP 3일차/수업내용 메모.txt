@@ -1,0 +1,21 @@
+﻿for는 어떠한 set을기준으로
+while은 어떠한 조건을 기준으로
+
+--------------------------------------------
+
+Comprehension
+
+list_comprehension_example =[num+num for num in number]
+print(list_example)
+
+tuple_comprehension_example = { num+num for num in number}
+print(compreghension_example)
+
+key_value = {1:2,2:4,3:9}
+dictionary_comprehension_example= { val:key for key,val in key_value.items() }
+
+
+
+===================입력과 출력======================
+
+
