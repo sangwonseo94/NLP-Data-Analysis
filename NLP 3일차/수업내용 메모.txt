@@ -18,4 +18,15 @@ dictionary_comprehension_example= { val:key for key,val in key_value.items() }
 
 ===================입력과 출력======================
 
+print(....sep="구분에 사용되는 문자")
+default는 ,로 되어있지만 sep로 지정할 수가 있다.
+출력되는것 맨뒤에 seperator를 지정할 수 있다.
+print(....end="")로 되어서 없으면 CRLF이다.있으면 설정값진행
 
+
+String{0},{1},{2}.format(...)  <= 안찍혀있으면 그 번호 빼고진행
+
+
+!type 파일이름
+파일을 shell 명령어로 열어준다.
+ㅁㄴㅇㅁㄴㅇㅁ
