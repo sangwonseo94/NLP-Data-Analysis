@@ -1,0 +1,4 @@
+
+df3.T.describe()
+
+dt3의 Transpose를 시키고 디스크라이브
