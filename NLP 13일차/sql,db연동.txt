@@ -1,0 +1,46 @@
+pip install pymysql 
+
+
+connection 객체로 db연결을 설정하고 cursor로 가져온다.
+
+db 파라미터를 만들어야한다.
+
+만들고 똑같이하면 연결 
+
+https://swalloow.github.io/db-to-dataframe
+// db <=> pandas data frame;
+
+import pymysql.cursors
+
+# Connect to the database
+connection = pymysql.connect(host='localhost',
+                             user='root',
+                             password='12341234',
+                             db='db', ##create database db로 생성해주어야한다.
+                             charset='utf8mb4',
+                             cursorclass=pymysql.cursors.DictCursor)
+
+try:
+    with connection.cursor() as cursor:
+        
+        print("db접속 성공")
+        # Create a new record 값을 저장시킬때
+        sql = "INSERT INTO `users` (`email`, `password`) VALUES (%s, %s)"
+        # email .password 단어가 %s %s 로 들어간다.
+        cursor.execute(sql, ('webmaster@python.org', 'very-secret'))
+        # 값이 들어간다.
+    # connection is not autocommit by default. So you must commit to save
+    # your changes.
+    connection.commit()
+
+    with connection.cursor() as cursor:
+        # Read a single record
+        sql = "SELECT `id`, `password` FROM `users` WHERE `email`=%s"
+        cursor.execute(sql, ('webmaster@python.org',))
+        # %s 에 이메일이 들어가서 query문 완성!
+        result = cursor.fetchone()
+        #한줄씩 fetch()
+        print(result)
+finally:
+    connection.close()
+    print("db접속 해제")
