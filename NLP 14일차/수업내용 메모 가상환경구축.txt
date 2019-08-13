@@ -1,0 +1,8 @@
+conda create -n 이름 python=version anaconda 
+
+anaconda를 입력하면 관련 패키지들이 다 깔림.
+
+conda install pytorch=0.4.1 -c pytorch
+
+파이토치 설치
+
