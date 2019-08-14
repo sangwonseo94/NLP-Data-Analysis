@@ -1,0 +1,50 @@
+conda install pytorch=1.0.0 torchvision -c pytorch
+
+tensor .dim() => 정수 반환 /.shape / .size() 
+
+torch.Tensor는 Broadcasting 연산이 되어서 2x2 행렬에 2더하면 다 2더해짐 => 차원확장
+
+이차원 행렬에서 접근은 tensor[2:4 , 2:4] => 이처럼 , 로 차원을 구분해서 지정해준다
+
+그냥 mul 은 element by element로 되고 
+mm을 써주어야지 잘된다.
+pytorch에서 일차행렬 이차행렬은 괄호의 중첩개수로 판단한다. []->숫자하나.[[]] -> 숫자두개
+
+tensor.mean(dim=)은 평균값을 반환한다. dim은 차원
+
+sum/mean은 dim을 안정해주면 전체 element를 대상으로 실시하고
+dim = 0 이면 col방향 dim = 1 이면 row 방향으로 진행한다
+
+.max()는 그냥쓰면 가장큰 요소만을 반환하고
+.max(dim=0) 인경우 첫번째는 가장큰 row를 반환해주고, 두번째는 인덱스를 반환한다.
+.max(dim=0)[0],.max(dim=0)[1] 이런식으로 접근하면 된다.
+dim = -1,1 일때 row방향으로 전체를 확인하고 각각큰것을 묶어서 반환한다.
+dim = 0 일때 col방향으로 전체를 확인하고 각각큰것을 묶어서 반환한다.
+
+tensor.view([]) <= tensor를 reshape해주는 기능이다 view[차원,행,열] 으로 
+tensor의 모양을 만들어준다 -1로 사용하면 최댓값을 가져온다.
+
+** -1,-2,...의 차이를 정리하기@@@@@
+
+tensor.squeeze() : tensor가 [,1] 로 끝나면 뒤에 1을 날려준다. => 즉 vec의 모양이 바뀐다.
+tensor.unsqueeze() : tensor의 차원을 높여준다 -> [3,2,1]을 [[3,2,1]]로 변경
+
+tensor의 기본타입은 float이다 longtensor()는 정수 64비트를 말한다.
+bytetensor()는 8바이트 
+
+concatenate => 방향으로 이어붙이기..
+torch.cat([],dim=0) dim=0 이면 row의 수가 방향 / dim=1이면 col의 수가 증가 하는 방향
+
+torch.stack([x,y,z], dim = 1) dim =1 이면 col수가 증가하는 방향으로 즉3x2가 2x3이런식
+torch.cat와 torch.stack에서 dim=0이면 row가 증가하는 방향으로 리턴 / dim = 1이면 col이 
+증가하는 방향 일단 x 를 다넣고 y를 다넣는 순서로 진행
+
+
+torch.ones_like(tensor) = > 모두 1 인 행렬반환
+torch.zeros_like(tensor) = > 모두 0 인 행렬반환 
+// tensor의 차원은 그대로 따라가면서 값이 채워진것을 반환
+
+in_place operation
+
+mul_(2) 하면 계산된 값이 변수에 값이 저장된다. // 일단은 숫자만 쓰자 // 행렬간연산에서는 
+사용 x
