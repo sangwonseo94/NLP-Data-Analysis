@@ -2,3 +2,37 @@ xy = np.loadtxt('data-01-test-score.csv', delimiter=',', dtype=np.float32)
 
 delimiter 지정 
 csv파일 가져오는 방법
+
+-==================================
+
+Logistic Regression 알고리즘 -> binary classifier 를 만드는 것 
+우리는 2진으로 나누는 경계가 필요하다
+기존의 y= xw+b는 -inf ~ inf 이므로 sigmoid를 사용하자
+0~0.5 는 0 으로 0.5~ 1 은 1로 decision 하자 
+
+sigmoid(x) = 1  / ( 1 + e^-x)
+
+즉 x 자리에 wx가 들어간다 .
+
+그냥 mse를 사용하다보면  / local에 빠지게되고 학습이 안된다 .
+따라서 cost를 다시 정의해주자 .
+c(sigmoid(x)=h(x),y) = if y =1 이면 -log(h(x)) y = 0  - log(1-h(x)) 를 사용하여
+학습하자
+
+*************
+cost (x)  = ylog(h(x)) - (1-y)log(1-h(x))
+************
+/왜? ==> 찾아보자
+/ https://wikidocs.net/4289 참고이론 
+
+이 weight에 대해서 gradient descent를 실행해서 w를 업데이트해주자 
+이름은 binary cross_entropy
+
+F.binary_cross_entropy(hypothesis,Y_data)
+
+hypothesis : 이놈이 y랑 비슷하겠네
+cost = 이거를 줄여야겠네
+
+
+torch.rand(3,5 ,require_grad= True)
+3x5 의랜덤 
