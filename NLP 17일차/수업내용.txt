@@ -1,0 +1,4 @@
+xy = np.loadtxt('data-01-test-score.csv', delimiter=',', dtype=np.float32)
+
+delimiter 지정 
+csv파일 가져오는 방법
