@@ -1,0 +1,67 @@
+MLE가 나오면 최적화가 관련되었구나..
+
+Overfitting : training set 에 대해서 너무잘된다. vaildation set,test set에 대해서
+loss와 차이가 많이난다. => 오버피팅이 일어났다 -> 일반화가 안된다..
+
+early stopping : 차이가 많이 나려는 epoch에 대해서 멈추어서 overfitting을 
+막는다.
+
+OVERFITTING
+
+MORE DATA,LESS FEATURES, REGULARIZATION
+
+Regularization
+
+1. early stopping
+2. Reducing Network Size => layer 수를 줄인다.
+underfitting에서는 node와 layer를 추가해서 학습이 잘되도록 하다가 
+overfitting이 되면 Network Size를 줄인다.
+3. Weight Decay
+4. DropOut
+5. Batch Normalization
+
+auto MLE -> Grid Search
+
+
+x_exp = x_train.mean()
+x_sigma = x_train.std()
+Norm_x_train = (x_train-x_exp) / x_sigma
+
+간단하게 Train set으로 평균 표준편차를 구해서 정규화를 해준다. 
+
+통계적인 전처리(정규화)를 이용해서 오버피팅과 학습결과를 조절하자!
+
+
+L2 NORM
+l2_reg = 0;
+for param in model.parameters():
+	l2_reg += torch.norm(param)  
+cost += l2_reg
+
+// l2에대해서 norm을 실시해준다. 갑작스런 Feature 값 변화를 막는다.
+
+torchvision => datasets 등등 문제들 제공 
+
+with torch.no_grad():
+    X_test = mnist_test.test_data.view(-1, 28 * 28).float()
+    Y_test = mnist_test.test_labels
+
+    prediction = linear(X_test)
+    correct_prediction = torch.argmax(prediction, 1) == Y_test
+    accuracy = correct_prediction.float().mean()
+    print('Accuracy:', accuracy.item())
+
+    # Get one and predict
+    r = random.randint(0, len(mnist_test) - 1)
+    X_single_data = mnist_test.test_data[r:r + 1].view(-1, 28 * 28).float()
+    Y_single_data = mnist_test.test_labels[r:r + 1]
+
+    print('Label: ', Y_single_data.item())
+    single_prediction = linear(X_single_data)
+    print('Prediction: ', torch.argmax(single_prediction, 1).item())
+
+    plt.imshow(mnist_test.test_data[r:r + 1].view(28, 28), cmap='Greys', interpolation='nearest')
+    plt.show()
+    
+
+camp =""범위를 지정 Greys 0-255 interpolation="" 부드럽게 표현
