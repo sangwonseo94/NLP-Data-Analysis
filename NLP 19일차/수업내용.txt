@@ -1,0 +1,24 @@
+model = torch.nn.Sequential(linear1, relu, linear2, relu, linear3)
+
+class 로 정의하면 커스터마이징에 유용하지만, 간단하게 내장함수로 쌓아서 
+구현할 수 있다.
+
+Weight initialization : 웨이트를 랜덤으로  / 정규화를 / ..
+
+RBM : autoencoder랑 비슷한..
+pretraining : weight 를 적절하게 
+autoencoder 
+
+xavier / he initialization 사비에르 헤 초기화방법
+
+torch.nn.init.xavier_uniform_(linear.weight) -> 만 입력해주면 사비에르 방식으로 
+웨이트가 업데이트 된다.
+
+dropout = torch.nn.Dropout(p= prob)=> test와 valid일떄 는 꺼주어야한다.
+
+batch noramlization : 통계기반으로 최적화 
+
+은닉층의 노드개수, 네트워크의 깊이는 Underfitting
+에서 overfitting까지 가는동안 계속 높여야한다.
+
+시각화 틀은 따서 쓰자 
