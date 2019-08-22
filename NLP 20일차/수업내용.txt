@@ -1,0 +1,82 @@
+bn1 = torch.nn.BatchNorm1d(32)
+bn2 = torch.nn.BatchNorm1d(32)
+
+
+bn_model = torch.nn.Sequential(linear1, bn1, relu,
+                            linear2, bn2, relu,
+                            linear3).to(device)
+nn_model = torch.nn.Sequential(nn_linear1, relu,
+                               nn_linear2, relu,
+                               nn_linear3).to(device)
+
+torch.nn.init.xavier_uniform_(linear1.weight)
+torch.nn.init.xavier_uniform_(linear2.weight)
+torch.nn.init.xavier_uniform_(linear3.weight)
+
+Torch.nn.rnn()
+
+
+ def __init__(self):
+        super(CNN, self).__init__()
+        # L1 ImgIn shape=(?, 28, 28, 1)
+        #    Conv     -> (?, 28, 28, 32)
+        #    Pool     -> (?, 14, 14, 32)
+        self.layer1 = torch.nn.Sequential(
+            torch.nn.Conv2d(1, 32, kernel_size=3, stride=1, padding=1),
+            torch.nn.ReLU(),
+            torch.nn.MaxPool2d(kernel_size=2, stride=2))
+        # L2 ImgIn shape=(?, 14, 14, 32)
+        #    Conv      ->(?, 14, 14, 64)
+        #    Pool      ->(?, 7, 7, 64)
+        self.layer2 = torch.nn.Sequential(
+            torch.nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1),
+            torch.nn.ReLU(),
+            torch.nn.MaxPool2d(kernel_size=2, stride=2))
+        # Final FC 7x7x64 inputs -> 10 outputs
+        self.fc = torch.nn.Linear(7 * 7 * 64, 10, bias=True)
+        torch.nn.init.xavier_uniform_(self.fc.weight)
+
+
+높이가 39 픽셀이고 폭이 31 픽셀인 컬러 
+사진 데이터의 shape은 (39, 31, 3)3으로 표현합니다.
+ 반면에 높이가 39픽셀이고 폭이 31픽셀인 흑백 사진 
+데이터의 shape은 (39, 31, 1)입니다.
+
+1.4 패딩(Padding)
+Convolution 레이어에서 Filter와 Stride에 작용으로 Feature Map 크기는 입력데이터 보다 작습니다. Convolution 레이어의 출력 데이터가 줄어드는 것을 방지하는 방법이 패딩입니다. 패딩은 입력 데이터의 외각에 지정된 픽셀만큼 특정 값으로 채워 넣는 것을 의미합니다. 
+보통 패딩 값으로 0으로 채워 넣습니다.
+
+
+scikit-learn : learning 모델이 있다
+
+scipy : scientic python 
+
+
+hypothesis = F.softmax(z, dim=1)
+
+X_train, X_test, y_train, y_test = train_test_split(
+    iris_dataset['data'], iris_dataset['target'], random_state=0)
+
+knn = KNeighborsClassifier(n_neighbors=1)
+knn.fit(X_train, y_train)
+
+print("테스트 세트의 정확도: {:.2f}".format(knn.score(X_test, y_test)))
+
+
+
+scikit learn : 모델을 객체로 생성한다.
+모델.fit(트레인데이터x,트레인데이터y)
+로 학습후
+모델.score( 테스트 데이터x,테스트데이터y)로 정확도 판별
+모델.predict(테스트 데이터) -> 해당데이터의 hypothesis가 리턴된다.
+
+knn = KNeighborsClassifier(n_neighbors=1) // hyperparameter 를 조정하자
+
+사이킷런 = estimator
+
+train_test_split()
+
+predict = 지도학습일때
+비지도학습 transform() predict()
+
+랜덤포레스트 -> 결정경계
