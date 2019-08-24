@@ -1,0 +1,31 @@
+agent : 대행해주는 
+브라우저 엔진 운영체제 버전 / 
+
+디폴트는 : 모바일 환경 // 
+
+referer : 바로 직전의 url 을 타고왔다. 같은경우도있고 
+
+ai college
+
+외국인의 자금 유입이 매매동향에 큰 영향을 미친다
+
+
+%s % (code)
+
+s에 code가 들어간다 
+
+.format으로 하자 그냥 
+
+
+marcap 1995 - 2018
+
+상장주식수가 포함된 데이터셋 
+
+한국은행 open API 
+
+
+params = 'G9FSKDP0EDJ4BVOZ5B9D/json/kr/1/5/'
+json 이나 xml로 받을수 있다
+
+result = json_normalize(jo['KeyStatisticList']['row'])
+처음하고 레코드의 시작을 알려준다.반환값은 dataframe
