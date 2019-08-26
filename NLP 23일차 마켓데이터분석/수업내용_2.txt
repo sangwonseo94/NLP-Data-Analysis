@@ -1,0 +1,48 @@
+가격 데이터
+해외주식 가격 데이터: AAPL(애플), AMZN(아마존), GOOG(구글) 등
+국내주식 가격 데이터: 005930(삼성전자), 091990(셀트리온헬스케어) 등
+각종 지수: KS11(코스피지수), KQ11(코스닥지수), DJI(다우지수), IXIC(나스닥 지수), US500(S&P 5000)
+환율 데이터: USD/KRX (원달러 환율), USD/EUR(달러당 유로화 환율), CNY/KRW: 위엔화 원화 환율
+암호화폐 가격: BTC/USD (비트코인 달러 가격, Bitfinex), BTC/KRW (비트코인 원화 가격, 빗썸)
+
+
+pip install -U (업그레이드) finance_datareader
+
+S&P500 은 505개이다. 클래스가 2개인기업이 6개있다.
+하나를 빼고 / 5개 버켄서웨이?(한주당 가격이 너무비싸)
+
+시고저종//
+
+미국
+'US[개월]MT=RR' 형식으로 조합 (가능 개월=1,3,6)
+'US[년도]YT=RR' 형식으로 조합 (가능 년도=1,2,3,4,5,7,10,30)
+
+US10YT=X	10년만기 미국 국채 수익률 => 기준
+
+FinanceDataReader 와 PandasDataReader를 같이 쓰자 
+
+close : 장 마감의 가격 
+open : 장 시장의 가격
+volume : 거래 횟수 
+
+
+DEXKOUS - Daily Exchange KO-US
+EXKOUS - Monthly Exchange KO-US
+AEXKOUS - Annual Exchange KO-US
+
+
+한국, 소비자 물가 지수
+https://research.stlouisfed.org/fred2/series/KORCPIALLMINMEI
+2010년을 100으로 481개 조사항목을 가중평균하여 매월 지수를 산출
+부문별 소비자 물가 지수
+KORCPIALLMINMEI : CPI (All Items) -> 일반 소비자들이 느끼는 체감물가
+KORCPIHOUMINMEI : CPI (Housing) ->
+KORCPIENGMINMEI : CPI (Energy) ->
+KORCPIFODMINMEI : CPI (Food) ->
+
+GDP
+일정 기간 동안 한 국민 경제 내에서 생산된 최종재의 시장 가치
+Real GDP: 실질 GDP, 물가 인상분이 반영된 GDP
+Real GDP per Capita: 1인당 실질 GDP
+
+물가와 통화량은 비례한다.
