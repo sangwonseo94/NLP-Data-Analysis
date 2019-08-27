@@ -1,0 +1,18 @@
+과거의 데이터로 현재의 전략을 판단해본다
+잘되면 좋은 전략이라고 생각하자
+
+df['Close'].pct_change()
+로그수익률 = ln(나중가격/처음가격)
+log_chg = np.log(df['Close'] / df['Close'].shift(1))
+로그 누적수익률 log_chg.cumsum()
+최종 누적수익률 log_ret.cumsum()[-1]
+
+누적 로그 수익률을 수익률 환산하려면 exp을 적용하고 1.0을 빼줍니다
+ret = log_ret.apply(np.exp) - 1.0
+.apply 
+
+
+np.where(df_backtest['SHORT_MA'] > df_backtest['LONG_MA'], 1, 0)
+삼항
+
+signal은 내가 주식을 가지고 있냐없냐
