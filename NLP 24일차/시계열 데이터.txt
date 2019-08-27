@@ -1,0 +1,46 @@
+
+인덱스가 Datetimeindex인 데이터이다.
+
+시계열 데이터: 인덱스가 DatetimeIndex 인 데이터
+
+시계열 데이터와 다른 데이터의 차이는 인덱스이다.
+특정 순간을 타임스탬프(Timestamp)라고 하며,
+이 Timestamp 를 인덱스(DatetimeIndex)로 
+하는 데이터를 시계열 데이터라고 한다.
+
+
+pd.to_datetime()
+
+pd.date_range() -> 날짜의 변수를 계산해준다 30/31 윤년등등
+
+pd.date_range('2016-01-01', '2016-01-15', freq='D') //하루별로
+년월일시분초 밀리초까지 포함한다.
+
+날짜 생성
+ freq="B"
+비지니스 데이 freq에 대해서는 기본서 참고
+re_first = ts.resample('5D').mean()
+5개에서 평균을 구하는것
+
+다운 sampling ts_hourly = ts.resample('6H').mean()
+하루데이터를 6시간으로 4개로 쪼갠다 nan이 들어가고
+
+NaN을 채우는 방법
+
+fillna(0) - 모두 0으로 채운다.
+ffill() - forward fill
+bfill() - backward fill
+interpolate() - 보간
+
+으로 채워주자
+
+
+df_up = df['Close'] > df['Open']
+df_up.head() // 종가 > 시가 ; 가격이 오른날
+df[df_up].head(5)
+df_up은 조건식으로 반환된 bool 타입 리스트이다.
+
+pivoted = df.pivot( index='month', columns='corp', values='ad_exp' )
+pivoted
+
+내가 인덱스 컬럼 벨류를 정해버린다.

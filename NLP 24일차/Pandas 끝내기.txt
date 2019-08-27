@@ -1,0 +1,14 @@
+
+1차원 Series , 2차원 DataFrame 3차원 Panel
+df.describe()
+df.iloc[1] => 정수 인덱싱 [행,열]
+df.loc[] => 레이블 인덱싱 
+
+
+df= df.drop(['asd'], axis =1 ) col 삭제
+df= df.drop(['asd'], axis =0 ) row 삭제
+
+df[(150 < df.삼성전자 ) & (df.삼성전자 < 220)]
+.으로도 접근이 가능하네..
+
+
