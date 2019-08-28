@@ -1,0 +1,68 @@
+품사를 매기는 과정 : 형태소 morpheme
+
+Document 문서
+Corpus(말뭉치), corpora (말뭉치들)
+Token 토큰
+Morphemes 형태소, 형태소 분석: 형태소, 어근, 접두사/접미사, 
+품사(POS)등 다양한 언어적 속성의 구조 파악
+POS 품사, Part-of-speech (예: Nouns),
+POS 태깅(=토큰에 POS 정보 추가)
+
+Lexical Analysis (어휘분석)
+Syntax Analysis (구문 분석)
+Semantic Analysis (의미 분석)
+Discourse Analysis (대담 분석) : 대화를 이끌어가는 
+
+NLP의 주요 기술
+Morphology Analysis (형태소 분석): 형태소, 어근, 접두사/접미사, 품사등 다양한 언어적 속성의 구조 파악
+POS tagging (품사 태깅): 뜻과 문맥을 고려하여 형태소에 정보를 추가
+NER (Named Entity Recognition): NE를 찾고, 타입을 식별 -> 대화의 일관성유지를 위해 같은 단어라도 어떤 종류로 이야기하고있는지?
+WSD (Word-sense disambiguation, 단어의미분별): 중의성 해소
+SRL (Semantic Role Labeling, 의미론적 라벨링)
+Sentiment Analysis (감성분석): 주관적 인상, 감정 태도 측정 (=Opinion mining)
+Text Classification (텍스트 분류)
+Knowledge Extraction (지식 추출)
+
+LIMITATION of deep learning
+설명가능성(explainability) 부족
+투명성(transparency) 부족
+점진적 학습 불가능
+법적 윤리적 책임소재 문제
+
+NLTK : Natural Language Toolkit
+KoNLPy: Korean NLP in Python -> 형태소분석기를 쓰자
+Gensim: vector space modeling + topic modeling toolkit : advance한 알고리즘
+
+코사인유사도를 추천시스템에도 도입할 수 있다.
+
+LSI(Latent Semantic indexing) 동의어, 다중의미를 수치적으로 표현함
+
+Concordance (색인): 단어가 쓰인 문맥을 모두 찾아준다
+
+Stemming, lemmatization
+Stemming (어간 추출), Stemming (원형 추출)
+
+NLTK 지원
+
+Stemmer: Porter(보수적), Lancaster(적극적)
+Lemmatizer: WordNetLemmatizer (WordNet 이 계산한 형태소를 참조, 인터넷 연결 필요)
+Stemmer vs Lemmatizer
+
+stemming은 단어만 본다 (결과 stem이 사전에 없을 수도 있다)
+Lemmatizer는 더 느리고 더 보수적
+
+KoNLPy 형태소 분석기
+konlpy.tag 에서 품사 태깅 패키지 5개를 제공
+
+Hannanum 한나눔
+Kkma	꼬꼬마
+Komoran 꼬모란
+Mecab 은전한닢
+Okt 트위터
+각 클래스의 주요 메소드
+
+morphs : 형태소 추출
+nouns : 명사 추출
+pos : pos 태깅
+
+각 클래스마다 3개의 메소드로만 구성되어있다.

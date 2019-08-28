@@ -1,0 +1,9 @@
+RSS News Feed 링크 -> 최신 컨텐츠의 목록
+https://gist.github.com/5f6852620da984ea8baddd7669a64acc
+=> 15000개?의 뉴스 
+
+개수 - > 단어수를 세자 
+
+pos tagging = > 형태소 분석go 
+
+한국어는 어미가 너무 발달

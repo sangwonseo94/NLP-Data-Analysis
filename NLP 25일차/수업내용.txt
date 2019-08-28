@@ -1,0 +1,42 @@
+전자공시 시스템 .. 
+비정형/기업/,,,
+
+발행시장 / 유통시장
+발행시장 -> 주식시장에서 IPO관련 공시
+IR담당 : 기업의가치 주식시장의 소통
+금융감독원 : dart / 한국거래소 : KIND 
+
+5퍼센트이상의 기업지분 가진사람/기업/특수관계자
+가 1주이상바뀌면 5영업일 이내에 보고해야함
+
+당일 접수 10건 
+http://dart.fss.or.kr/api/search.json?auth={auth}
+당일 접수 100건
+http://dart.fss.or.kr/api/search.json?auth={auth}&page_set=100
+회사의 당일 접수 10건
+http://dart.fss.or.kr/api/search.json?auth={auth}&crp_cd={code}
+회사의 당일 접수 최종보고서만 10건
+http://dart.fss.or.kr/api/search.json?auth={auth}&crp_cd={code}&fin_rpt=Y
+회사의 전체(19990101~당일) 공시 10건
+http://dart.fss.or.kr/api/search.json?auth={auth}&crp_cd={code}&start_dt=19990101
+회사의 전체 정기공시 10건
+http://dart.fss.or.kr/api/search.json?auth={auth}&crp_cd={code}&start_dt=19990101&dsp_tp=A
+회사의 전체 사업+반기+분기보고서 10건
+http://dart.fss.or.kr/api/search.json?auth={auth}&crp_cd={code}&start_dt=19990101&bsn_tp=A001&bsn_tp=A002&bsn_tp=A003
+
+
+공시보고서 가져오기
+
+텍스트의 패턴 ~~> 정규식
+사업의내용 > dart  
+
+# 매일경제
+rss_link = 'http://file.mk.co.kr/news/rss/rss_30100041.xml'
+
+r = requests.get(rss_link)
+r.encoding = 'euc-kr'
+
+feeds = feedparser.parse(r.text)
+
+인코딩을 바로바로 써주자
+rss_linkdml entries 에 link와 title로 접근이 가능하다.
