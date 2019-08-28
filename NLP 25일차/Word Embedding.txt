@@ -1,0 +1,34 @@
+워드 임베딩 -> 단어를 vector로!
+
+CBOW => 주변의 단어로 뭐가올까를 예착
+SKip-gram-> 현재단어로 문맥을 예측  서로반대
+word2vec => CBOW + SKIPGRAM
+
+벡터끼리의 연산이 가능하다. Vec의 뺄셈을 생각..
+
+
+from gensim.models.word2vec import Word2Vec
+
+# size=100 (100차원 벡터), window=10 (10단어씩), min_count=3 (최소 3회 이상 출현)
+model = Word2Vec(news_tokens, size=100, window=10, min_count=3)
+size / window / min_count 는 default
+
+model.wv.most_similar(positive=['삼성전자', '자동차'], negative=['스마트폰'])
+
+스마트폰이 삼성전자와 관련있다면 자동차와 관련있는것은 ? 이라고 해석하자
+
+model.wv.doesnt_match("스마트폰 배터리 액정 맥주 아이폰 갤럭시".split())
+model.wv.doesnt_match("바이오 시밀러 제약 코스피 코스닥".split())
+doesnt_match => 관련이없는것은?
+
+Pros and cons
+PROS
+
+사용 간편, 노력대비 엄청난 효과
+라벨 없는 데이터로 Supervied Learning
+CONS
+
+정확한 설명이 어려움 (머신러닝의 특징)
+성능향상을 위해 많은 튜닝 필요
+
+supervise learning을 한다.
