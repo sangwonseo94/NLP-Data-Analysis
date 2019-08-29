@@ -1,2 +1,28 @@
 크롤링 - > 다가져와서 내가 
 스크래핑 - > 내가 필요한것만 가져와서 
+
+vscode , colab , jupyter notebook 3가지만쓴다. 
+가상환경 -> 호스트위에 게스트를깐다
+
+LTS Long term 
+우분투 18 릴리즈 년도 04 버전
+엘라스틱서치?
+
+cmd => echo %path% <셋팅된 패스를 보여줌
+->어느 위치에서나 명령어로 vscode를 열수가 있따.
+탐색기로 ->파일 open with code <오른쪽 마우스버튼>
+
+vs code 리본에서 extension으로 컴파일러를 깔아주자..
+chpater 3을 참고!
+
+required arguments : 함수에서 인자를 받을때에 첫번째,두번째 순서로 구분하는것
+keyword arguments : 함수에서 weight = 이런식으로 이름으로 받는것 순서가 바껴도 된다.
+default argyments : 
+variable - length arguments : 
+
+parameter : 받는변수 
+arguments : 보내는변수
+
+lambda 이름이 없는 함수 / 함수는 객체이니까 / 변수에 저장할수도있다
+c의 function pointer!
+
