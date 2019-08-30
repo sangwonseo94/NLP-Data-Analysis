@@ -1,0 +1,27 @@
+re (regular expression)
+
+re.I 
+re.M : 여러 줄과 maching
+re.S or re.DOTALL :
+
+https://regex101.com
+정규식이 만들어진것 
+
+http://regexlib.com 
+정규식찾아서 쓰기
+
+search()
+
+re.search(r정규식, text) -> 처음만나는 문자열을 가져온다 .match와 비슷 처음의 차이
+못찾으면 none을 return
+group(num= 숫자) : group의 숫자번째를 가져옴
+
+re.findall()
+다 찾아서 리스트로 반환 
+sub = replace 일치하는 모든 pattern을 replace 한다. 
+count = 0 이면 전체 / 1이상이면 해당숫자만큼
+re.sub(r정규식,찾을 문자열,바꿔서 넣을 문자열 , count )
+
+re.complie() 패턴을 다시 시정
+prog = re.compile(r정규식)
+result = prog.match(대상)

@@ -1,0 +1,7 @@
+seek() : pointer의 개념 
+read()는 다 가져오는거고 
+readline()은 한줄씩 가져오는거
+
+? 한글자 * 0글자이상
+
+일반 text file 다루기 .txt를 참고하자 
