@@ -1,0 +1,42 @@
+
+
+* 데이터 베이스 실습 
+import pandas as pd
+import cx_Oracle
+
+conn = cx_Oracle.connect("scott","tiger","localhost:1521/XE")
+cursor = conn.cursor()
+sql  ="""
+select empno, ename, job, sal, comm, deptno
+from emp
+"""
+myemp = []
+cursor.execute(sql)
+for empno, ename, job, sal, comm, deptno in cursor:
+    mylist = []
+    mylist.append(empno),
+    mylist.append(ename),
+    mylist.append(job),
+    mylist.append(sal),
+    mylist.append(comm),
+    mylist.append(deptno)
+    myemp.append(mylist)
+col_label = ["empno", "ename", "job", "sal", "comm", "deptno"]
+df = pd.DataFrame(data = myemp, columns = col_label)
+conn.close()
+
+print(df.info())
+
+#ename_ = input("사원명 " )
+#print(df.loc[df.ename == ename_.upper()])
+print(df.loc[(df.sal > 1000) & (df.empno > 7800)])
+
+********** conn 과 execute 와 close() 순서로 디비는 실행한다.**********
+
+
+조건의 연결은 & 로 한다.
+df.loc[조건식]
+df. 으로 접근한다.
+
+.upper()
+.lower()
