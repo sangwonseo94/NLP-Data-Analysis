@@ -40,3 +40,36 @@ df. 으로 접근한다.
 
 .upper()
 .lower()
+
+삭제하는법 
+df.drop(index[] )
+df.drop(labels = )
+df.drop(columns = )
+끝에 inplace =True 를 해주어야지 덮어 써진다.
+
+추가하는법
+df['dasd'] = 2000
+2000이란 값이 다들어간다.
+조건을 줘서 추가하는법
+df['asdf'] = np.where(df['2qw']!= 'asd','yes','no') / 삼항처럼
+
+
+dataframe에 함수 적용하기
+1) map 과 apply은 series 대상 return 값이 series
+2) applymap()는 dataframe 값이 dataframe
+범위 뒤에 .apply(np.round)같이 사용한다
+
+axis = 0 행을 잡고 열처리
+axis = 1 열을 잡고 행처리 
+
+apply(에서 데이터프레임이 가지고있는 요소의 값은 그냥 자동으로 전달된다.)
+
+
+정규식 compile, match, search, findall, sub, 
+
+df.replace([1,2,3,4], 4) => 다대일 매핑으로 1234가 4로 바뀜
+df.replace([1,2,3,4],[4,3,2,1]) => 하나하나씩
+df.replace({0:100 , 1: 10}) -> 0을 만나면 100, 1을 만나면 10
+df.replace({'A':5},100) -> A열의 5을 100으로
+df.replace(to_replace = r'',value='new',regex= True)
+정규식의 해당하는 내용을 new로 바뀐다. 

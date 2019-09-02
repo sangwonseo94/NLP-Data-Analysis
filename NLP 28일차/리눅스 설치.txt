@@ -1,0 +1,29 @@
+os 까는 방법 
+
+1.하나의 pc에 두개의 -> dual booting 윈도우 쓸래? 리눅스 쓸래?
+-> 하나가 독식한다, -> 속도 빠름
+
+2. 가상환경으로 2개를 깐다(virtual program) 
+-> 메모리를 나누어서 쓴다/ 메모리가 부족할 수도 있다. cpu도 나누어서 쓴다.
+
+4096 mib = 4000mb 
+
+시스템 마더보드 
+
+플로피디스크 체크해제
+프로세서 시피유 4개 
+디스플레이 비디오 메모리 최대
+가속 3차원 가속기
+저장소 : hdd 하고 비디오플레이어 설치되어있다.
+넣는거랑 똑같음-> 옆에 cd모양 -> 다운받은 우분투파일 ㄱㄱ
+디스크가 부족하면 붙이면 된다.
+
+부팅 최소요건은 만족했다..
+
+something else 
+
+sda -> 리눅스에서 하나의 하드디스크 sd a
+파티션을 나누자!
+sda -> freespace ->+ use as-> swap area / 4096
+sda -> freespace ->mount point-> / boot (booting할때) / 512 / primary
+freespace -> / (그냥 슬래쉬 하나 = root) / 이왕이면 primary -> primary는 최대 3개

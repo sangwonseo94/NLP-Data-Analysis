@@ -1,0 +1,8 @@
+
+
+单捞磐 傈贸府
+
+牢内爹 叼内爹... 
+null 贸府 
+1. fillna() 
+ 2. replace() 3.where() 4. dropna()
