@@ -1,0 +1,25 @@
+6)Font를 사용하는 방법은 3가지가 있다.
+-FontProperties 를 사용하는 방법 - graph의 font가 필요한 항목마다 지정해 주어야 한다.
+**
+-matplotlib.rcParams[]으로 전역 글꼴 설정 방법 - 그래프에 설정을 해주면 font가 필요한 항목에 적용된
+다.
+**
+
+-바로 위의 방법을 mpl.matplotlib_fname()로 읽어지는 설정 파일에 직접 적어주는 방법, 단 모든
+notebook에 적용된다.
+	--notebook을 열 때마다 지정해 주지 않아도 돼서 편리하다.
+
+plt.rcParams["font.family"] = 'nanummyeongjo'
+plt.rcParams["font.size"] = 20
+plt.rcParams["figure.figsize"] = (14,4)
+
+_______________________________________________________
+
+3)plot()
+-plot() 함수는 주어진 x, y 값을 선(lines)과 점(markers)으로 표시해 준다.
+-Syntax
+matplotlib.pyplot.plot([x], y, [fmt], data=None, **kwargs)
+-fmt : 색, 점, 라인의 style을 문자열로 지정.
+--예를 들면 ‘ro-’는 빨간색 동그란 점을 실선으로 연결한다.
+--점의 모양은 o(원), s(네모), v(역삼각형), ^(삼각형), x(x표시) 등이 있으며,
+--선의 스타일은 '-'(실선), '--'(대시선), '-.'(대시닷선), ':'(점선), ''(선없음) 등이 있다.

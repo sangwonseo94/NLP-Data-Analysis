@@ -1,0 +1,93 @@
+Pandas lab에 있는 메소드들은 안보고 사용할 수 있어야한다.
+없는건 api 보고 찾아쓰더라도..
+
+csv파일 read_csv / to_csv 
+utf-8 로저장하면 csv가 깨진다 ms가 싫어함
+cp949(ms949)로 인코딩해주어야한다.
+949는 한국 코드이다
+
+크롤링할때에도 깨짐현상발생
+euc-kr 우리나라 지금은 html5로 넘어오면서 utf-8
+으로 많이 바뀌었다.
+
+csv 고려사항  = header 가 있다 없다?
+header를 고려해야한다. 
+
+text파일은 delimiter를 고려(정규식 텝 등등)
+
+* 정리해서 pandas로 읽어드릴때에 
+형식에 따라서 달라진다.
+
+인덱싱 : iloc : index location 012로 접근 
+	 loc  : 인덱스는 label이다.
+
+df만들기 : 딕셔너리를 쓰면 
+좋긴한데 order가 정해진다.
+-> list를 이용하자
+index= 와 columns= 를 지정해주자
+read_csv로도 만들수 있다. 파일경로와 sep설정
+
+level로 2차원 3차원 
+
+부분데이터 : loc. iloc ["열이름"] 으로 접근
+
+
+데이터 삭제하기  df.drop 
+1. axis = 0 ,1 
+0 이면 행을 지운다.
+1 이면 열을 지운다.
+
+2.inplace : 원본을 건들거야? boolean타입
+
+
+정렬
+sort_index 
+sort_values(by~)
+ascending = True ; 오름?내림?
+kind = "퀵정렬"
+na_position = "last"
+
+
+
+그룹핑
+df.groupby(by= ,axis= ,)
+
+함수 적용
+map() / applymap() => series
+apply() =>  dataframe이 갔다 df 가옴
+많이쓰는 map과  apply는 기억 
+
+na 처리..
+fillna() , replace <=정규식 가능 
+
+------------------------------어제까지ㅣ
+
+df.duplicated() -> 중복된 여부를 boolean타입으로 
+알려준다
+
+
+df.drop_duplicates()-> 중복된거 제거
+df.info() 내용정보
+df.describe()
+ 요약통계량
+
+* unique()
+sql에 distinct같이 중복된값없애고..
+
+df 합치기
+pd.concat([df1,df2])
+ex ) 한명이 들어왔을때 똑같은 스키마로 만들고
+합치는 방식을 사용한다.따로 행 삽입이 없기때문에
+
+df2.append(df2)
+
+* concat는 pd소속 append는 df소속
+
+col으로 합치기 
+concat([df1,df2], axis = 1) 꼭 축을 지정해주자
+
+
+
+
+
+
