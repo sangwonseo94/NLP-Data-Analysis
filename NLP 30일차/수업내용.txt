@@ -1,0 +1,16 @@
+크롤링 : request , requests
+파싱 : beautiful soup
+
+enfek gkqclsrj scrapy
+
+라이브러리 vs 프레임워크
+
+주체가 개발자면 라이브러리
+프레임워크 구조가 정해져있어서 따라가야한다.
+
+// <=xpath 몇단계인지는 상관없다.
+
+
+
+
+thread - > 병렬처리 cpu가 현재 돌리는 code의 관점에서
