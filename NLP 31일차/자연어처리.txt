@@ -1,0 +1,8 @@
+import nltk
+nltk.download()
+corpora -> treebank 
+
+print(nltk.corpus.gutenberg.raw()[:100])
+정제되지 않는 데이터에 대해서 raw 데이터를 가져온다.
+
+데이터를 정재하는 곳에 정규식은 꼭서야한다!
