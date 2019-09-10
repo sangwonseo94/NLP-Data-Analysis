@@ -1,0 +1,49 @@
+전처리 
+
+grams = ngrams(sentense.split(), 2)
+
+토크나이징 -> 문장 토크나이징 / 단어 토크나이징
+어간추출
+
+
+씨네 21 // 크롤링하기
+
+
+request 처음
+get 경로 http 버전
+
+response 처음 
+http 버전 상태코드
+
+import requests
+import feedparser
+import newspaper
+
+# 매일경제, 경제 섹션
+rss_link = "http://file.mk.co.kr/news/rss/rss_30100041.xml"
+r = requests.get(rss_link)
+feeds = feedparser.parse(r.text)
+
+links = [entry['link'] for entry in feeds['entries']]
+
+for link in links[:5]: # 기사중 5개만 출력
+    article = newspaper.Article(link, language='ko')
+    article.download()
+    article.parse()
+
+    print('-' * 80)
+    #print(article.title)
+    print(article.title)
+    print(article.text)
+    print()
+
+뉴스기사 파싱  
+
+3문제 주관식
+
+17문제 객관식
+
+불용어 처리 
+명사만 추출(코모란 미캡)
+mongo db에 넣기 / df에 넣기
+워드클라우드
