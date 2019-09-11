@@ -1,0 +1,14 @@
+conda activate py37
+
+jupyter notebook
+
+
+
+
+
+
+
+
+support / 교집함 /  두품목 / 전체 트렌젝션수 / 
+ confidence / 
+lite
