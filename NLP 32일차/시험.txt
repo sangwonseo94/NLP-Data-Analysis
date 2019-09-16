@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup as bs
 from selenium import webdriver as wd
 from selenium.webdriver.common.by import By
+
 import pymongo
 from pymongo import MongoClient
 import re
@@ -44,3 +45,10 @@ for mytour in mylist:
 doc = db.info.find({})
 for i in doc:
     print(i[key 값])
+
+wordcloud 
+from wordcloud import WordCloud
+wordc= WordCloud(max_words = , font_path="제어판\모양 및 개인 설정\글꼴\NGULIM")
+wordc.generate(text)
+plt.figure()
+plt.imshow(wordc, interpolation)
