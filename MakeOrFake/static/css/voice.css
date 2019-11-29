@@ -1,0 +1,72 @@
+
+
+.buttonstyle{
+    border-style:none;
+    background:white;
+}
+
+.emptyspace {
+    height: 40px;
+}
+
+.largeemptyspace {
+    height: 100px;
+}
+
+.divstyle{
+    width : 33%;
+    height:100%;
+    text-align: center;
+}
+
+.bmfont {
+
+    font-family: 'Jua', sans-serif;
+
+}
+
+#wave {
+    height: 100px;
+}
+
+#waveform {
+    display: none;
+}
+
+.imgstyle{
+    width: 220px;
+    height: 220px;
+}
+
+.intro-font{
+
+    font-size: 20pt;
+    text-align: center;
+}
+
+.neworder-lg-3{
+
+    order : 3;
+
+}
+
+.newcol-lg-6 {
+
+    flex : 0 0 50%;
+    max-width: 33.333333333%;
+}
+
+.imgheight{
+
+    height:225px;
+}
+
+.fileupload{
+    height:225px;
+    width:100px;
+}
+.stsimg{
+
+    background-color:white;
+     border-color:white;
+}

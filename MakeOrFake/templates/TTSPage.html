@@ -1,0 +1,294 @@
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="description" content="">
+            <meta name="author" content="">
+
+            <title>갓현아님과 아이들</title>
+
+            <!-- Bootstrap core CSS-->
+            <link rel="stylesheet" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+            <!-- Custom fonts for this template -->
+            <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+            <!-- Custom styles for this template -->
+            <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="{{url_for('static',filename='css/voice.css')}}">
+            <link rel="stylesheet" href="{{url_for('static',filename='css/one-page-wonder.min.css')}}">
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+            </head>
+
+            <script>
+
+
+
+            </script>
+
+            <body>
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container">
+            <a class="navbar-brand bmfont" href="#">Make Or Fake</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link bmfont" href="/STS">STS Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bmfont" href="/TTS">TTS Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bmfont" href="/STT">STT Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bmfont" href="/intro">팀 소개</a>
+              </li>
+            </ul>
+            </div>
+            </div>
+            </nav>
+
+            <header class="masthead text-center text-white">
+            <h1 class="masthead-heading mb-0 bmfont">Text To Speech</h1>
+
+            <h2 class="masthead-heading mb-0 bmfont">TacoTron with Tensorflow</h2>     
+
+            </header>
+            <div class="emptyspace"> </div>
+
+
+            <section>
+
+            
+            <div sclass="emptyspace"> </div>
+            <h1 class="bmfont" align="center"> Results </h1> 
+            
+
+
+            <div class="row align-items-center">
+
+
+            <div align="center" class="newcol-lg-6 neworder-lg-3">
+            
+              <img class="point rounded-circle imgstyle" src="{{url_for('static',filename='img/손석희.jpg')}}" alt="경로오류">
+            </div>
+           
+            <div class="newcol-lg-6 neworder-lg-3" >
+              <h2 class="bmfont">Sentence:</h2>
+                <h3 class="bmfont">장마담한테 주려는거 이거이거<br> 장짜리아니여?</h2>             
+                  <div>
+                    <b class='bmfont'>5 만번</b><audio controls> <source src="{{url_for('static',filename='voice/장짜리5만번.wav')}}" > </audio><br>
+                    <b class='bmfont'>10만번</b><audio controls> <source src="{{url_for('static',filename='voice/장짜리10만번.wav')}}" > </audio><br>
+                    <b class='bmfont'>15만번</b> <audio controls> <source src="{{url_for('static',filename='voice/장짜리15만번.wav')}}" > </audio><br>
+                    <b class='bmfont'>20만번</b> <audio controls> <source src="{{url_for('static',filename='voice/장짜리20만번.wav')}}" > </audio><br>
+         
+                  </div>
+                  <b class='bmfont'>25만번</b><audio controls> <source src="{{url_for('static',filename='voice/장짜리25만번.wav')}}" > </audio><br>
+                 <b class='bmfont'> 30만번</b><audio controls> <source src="{{url_for('static',filename='voice/장짜리30만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>35만번</b><audio controls> <source src="{{url_for('static',filename='voice/장짜리35만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>40만번</b><audio controls> <source src="{{url_for('static',filename='voice/장짜리40만번.wav')}}" > </audio><br>
+ <b class='bmfont'>45만번</b><audio controls> <source src="{{url_for('static',filename='voice/장짜리45만번.wav')}}" > </audio><br>
+ <b class='bmfont'>46만번</b><audio controls> <source src="{{url_for('static',filename='voice/장짜리최종.wav')}}" > </audio><br>
+
+                  </div>
+                  
+               
+                <div class="newcol-lg-6 neworder-lg-3" >
+                <h2 class='bmfont'>5만번 Attention</h2>
+                  <img style="width:500px; height:278px;"src="{{url_for('static',filename='voice/장짜리5만번.png')}}" alt="경로오류"> <br>
+
+                <h2 class='bmfont'>46만번 Attention</h2>  
+                  <img style="width:500px; height:278px;"src="{{url_for('static',filename='voice/장짜리최종.png')}}" alt="경로오류">
+          
+                 </div>
+          </div> 
+               <div class="emptyspace"> </div> 
+              
+
+            </div>
+
+            
+          
+            
+          </div>
+
+
+            <div class="row align-items-center">
+
+
+            <div align="center" class="newcol-lg-6 neworder-lg-3">
+            
+           
+            </div>
+           
+             <div   class="newcol-lg-6 neworder-lg-3" >
+              <h2 class="bmfont">Sentence:</h2>
+                <h3 class="bmfont">저는 ~만번 학습한 <br>손석희 모델입니다.</h3>             
+                  <div>
+                    <div>
+                   <b class='bmfont'> 5 만번 </b><audio controls> <source src="{{url_for('static',filename='voice/저는5만번.wav')}}" > </audio><br>
+                   <b class='bmfont'> 10만번</b><audio controls> <source src="{{url_for('static',filename='voice/저는10만번.wav')}}" > </audio><br>
+                   <b class='bmfont'> 15만번 </b><audio controls> <source src="{{url_for('static',filename='voice/저는15만번.wav')}}" > </audio><br>
+                   <b class='bmfont'> 20만번 </b><audio controls> <source src="{{url_for('static',filename='voice/저는20만번.wav')}}" > </audio><br>
+         
+                  </div>   
+
+                                       
+                  </div>
+                    
+                   <div>
+                 <b class='bmfont'> 25만번</b><audio controls> <source src="{{url_for('static',filename='voice/저는25만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>30만번</b><audio controls> <source src="{{url_for('static',filename='voice/저는30만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>35만번</b><audio controls> <source src="{{url_for('static',filename='voice/저는35만번.wav')}}" > </audio><br>
+                 <b class='bmfont'>40만번</b><audio controls> <source src="{{url_for('static',filename='voice/저는40만번.wav')}}" > </audio><br>
+                 <b class='bmfont'>45만번</b><audio controls> <source src="{{url_for('static',filename='voice/저는45만번.wav')}}" > </audio><br>
+                 <b class='bmfont'>46만번</b><audio controls> <source src="{{url_for('static',filename='voice/저는최종.wav')}}" > </audio><br>
+                  </div>
+                  </div>
+                    <div align="center">
+                             
+                  </div>
+            
+              
+                <div class="newcol-lg-6 neworder-lg-3" >
+              
+                  <h2 class='bmfont'>5만번 Attention</h2>
+                  <img style="width:500px; height:278px;"src="{{url_for('static',filename='voice/저는5만번.png')}}" alt="경로오류"> <br>
+
+                <h2 class='bmfont'>46만번 Attention</h2>  
+                  <img style="width:500px; height:278px;"src="{{url_for('static',filename='voice/저는최종.png')}}" alt="경로오류">
+          
+                 </div>
+             </div> 
+               </div> 
+            <div class="newcol-lg-6 neworder-lg-3" >
+              
+                
+          
+            </div>
+          
+            
+          </div>
+
+
+
+            <div class="emptyspace"> </div>
+              <div class="row align-items-center">
+
+
+            <div align="center" class="newcol-lg-6 neworder-lg-3">
+            
+           
+            </div>
+           
+               <div   class="newcol-lg-6 neworder-lg-3" >
+              <h2 class="bmfont">Sentence:</h2>
+                <h3 class="bmfont">혁신성장 청년인재 집중양성<br>자연어처리 씨반 수료를 축하합니다</h3>             
+                  <div>
+                  <b class='bmfont'>5 만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료축하5만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>10만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료축하10만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>15만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료축하15만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>20만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료축하20만번.wav')}}" > </audio><br>
+
+                                       
+                  </div>
+                    
+                  <b class='bmfont'>25만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료축하25만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>30만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료축하30만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>35만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료축하35만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>40만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료축하40만번.wav')}}" > </audio><br>
+                   <b class='bmfont'>45만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료축하45만번.wav')}}" > </audio><br>
+                   <b class='bmfont'>46만번</b><audio controls> <source src="{{url_for('static',filename='voice/수료최종.wav')}}" > </audio><br>
+                    <div align="center">
+                             
+                  </div>
+            
+               </div> 
+                <div class="newcol-lg-6 neworder-lg-3" >
+                <h2 class='bmfont'>5만번 Attention</h2> 
+                  <img style="width:500px; height:258px;"src="{{url_for('static',filename='voice/수료축하5만번.png')}}" alt="경로오류"> <br>
+                  <h2 class='bmfont'>46만번 Attention</h2> 
+                  <img style="width:500px; height:258px;"src="{{url_for('static',filename='voice/수료최종.png')}}" alt="경로오류">
+          
+                 </div>
+            
+          </div>
+
+
+            <div class="emptyspace"> </div>
+            <div class="emptyspace"> </div>
+            <div class="emptyspace"> </div>
+        
+            <div class="row align-items-center">
+
+
+            <div align="center" class="newcol-lg-6 neworder-lg-3">
+              <img class="point  rounded-circle imgstyle" src="{{url_for('static',filename='img/choi.PNG')}}" alt="경로오류">
+            </div>
+
+              <div   class="newcol-lg-6 neworder-lg-3" >
+              <h2 class="bmfont">손석희모델 전이학습결과<br>
+              Sentence:
+              </h2>
+                <h3 class="bmfont">어쨌든, 너도이제 정신 좀 차려줘야지<br>벌써 군대에 다녀온지도 되지 않나</h3>             
+                  <div>
+                  <b class='bmfont'>1 만번</b><audio controls> <source src="{{url_for('static',filename='voice/최민식만번.wav')}}" > </audio><br>
+                  <b class='bmfont'>30만번</b><audio controls> <source src="{{url_for('static',filename='voice/최민식10만번.wav')}}" > </audio><br>
+                  
+                                       
+                  </div>
+                    
+                 
+               </div> 
+                <div class="newcol-lg-6 neworder-lg-3" >
+              <h2 class='bmfont'>30만번 Attention</h2> 
+                  <img style="width:500px; height:258px;"src="{{url_for('static',filename='voice/최민식10만번.png')}}" alt="경로오류">
+          
+                 </div>
+
+            </div>
+
+            <div class="emptyspace"> </div>
+            <div class="emptyspace"> </div>
+            <div class="emptyspace"> </div>
+
+           
+
+
+
+            </section>
+
+
+
+
+
+
+
+            <div class="emptyspace"> </div>
+            <div class="emptyspace"> </div>
+            <div class="emptyspace"> </div>
+            <!-- Footer -->
+            <footer class="py-5 bg-black">
+            <div class="container">
+            <p class="m-0 text-center text-white small">Copyright &copy; 멀티캠퍼스</p>
+            </div>
+            <!-- /.container -->
+            </footer>
+
+            <!-- Bootstrap core JavaScript -->
+            <script src="MakeOrFake/vendor/jquery/jquery.min.js"></script>
+            <script src="MakeOrFake/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            </body>
+
+            </html>

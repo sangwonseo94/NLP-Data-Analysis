@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>갓현아님과 아이들</title>
+
+  <!-- Bootstrap core CSS-->
+  <link rel="stylesheet" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/voice.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/one-page-wonder.min.css')}}">
+  
+  
+</head>
+
+<script>
+
+
+</script>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand bmfont" href="#">Make Or Fake</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link bmfont" href="/STS">STS Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bmfont" href="/TTS">TTS Page</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link bmfont" href="/STT">STT Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bmfont" href="/intro">팀 소개</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+
+  
+    <div class="container">
+    <form>
+      <div class="emptyspace"> <h1 class="bmfont" align="center"> 음성파일을 업로드 해주세요 </h1> </div> 
+         <div align = "center">
+         <input id='myaudiofile' class="btn btn-primary btn-xl rounded-pill mt-5 bmfont" type="file" >
+            </div>
+          <button class="btn btn-primary btn-xl rounded-pill mt-5 bmfont" style="font-size:30pt;" name="" onclick="move_forward()">업로드</button>
+    </form>
+    </div>
+
+  </header>
+
+
+  <div class="emptyspace"> </div>
+
+  <section>
+ <div class="container">
+      <div sclass="emptyspace"> <h1 class="bmfont" align="center"> 듣고싶은 연예인을 선택해 주세요. </h1> 
+      </div> <div style =" height: 40px; "> </div>
+      <div class="row align-items-center">
+            <div class="divstyle">
+              <button class=" rounded-circle imgstyle" style="background-color:white; border-color:white;" onclick="CHOI_audio.play()">
+                <img class="point rounded-circle imgstyle" src="{{url_for('static',filename='img/choi.png')}}" alt="경로오류">
+              </button>
+            </div>
+
+            <div class="divstyle">
+              <button class=" point rounded-circle imgstyle " style="background-color:white; border-color:white;" onclick="SON_audio.play()">
+                <img class="point  rounded-circle imgstyle" src="{{url_for('static',filename='img/손석희.jpg')}}" alt="경로오류">
+            </div>  
+
+            <div class="divstyle">
+              <button class="rounded-circle imgstyle" style="background-color:white; border-color:white;" onclick="IU_audio.play()" > 
+                <img class="point rounded-circle imgstyle" src="{{url_for('static',filename='img/IU.jpg')}}" alt="경로오류">
+             </button>
+            </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+   
+        <div align = "center">
+          <button class="btn btn-primary btn-xl rounded-pill mt-5 bmfont" style="font-size:30pt;" name="" onclick="move_forward()">음성듣기</button>
+        </div>
+    <div class="emptyspace"> </div>
+    <div class="emptyspace"> </div>
+
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; 멀티캠퍼스</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="MakeOrFake/vendor/jquery/jquery.min.js"></script>
+  <script src="MakeOrFake/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
