@@ -1,0 +1,13 @@
+# Colab에서 Mecab 사용
+
+!git clone https://github.com/SOMJANG/Mecab-ko-for-Google-Colab.git 
+
+!cd Mecab-ko-for-Google-Colab/
+
+!bash install_mecab-ko_on_colab190912.sh
+
+from konlpy.tag import Mecab
+
+mecab = Mecab()
+
+print(mecab.morphs('이제 colab에서 mecab을 사용할수 있다!!' ))
