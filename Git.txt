@@ -1,0 +1,26 @@
+2020-01-17 GIT 수업
+
+gitlab == > 보안
+
+mkdir gittest/
+mkdir my_project/
+
+git status / git init / git log
+ls -al
+git remote add 별명 git주소
+
+
+vi editor
+
+i : 쓰기
+esc -> :wq  끄기 저장 닫기
+
+git commit -m 커밋메세지 한 후에 git log를 확인해주자!
+
+파일 수정후에는 git diff로 변경사항확인 
+
+git commit --amend / commit 메세지 수정
+
+checkout == branch 이동
+
+push 하기전에 pull 하기
