@@ -1,0 +1,9 @@
+primitive -> quick sort
+object -> merge
+nlogn
+
+f6으로 디버깅
+내가짠 것만 들어가고 
+window ->preference -> java -> debug - > stepfilter -> 체크 
+
+패키지 다를때 f2 ( rename ) => 패키지안에있는 클래스 명을 다 바꾸어 준다.

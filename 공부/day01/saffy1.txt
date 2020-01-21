@@ -1,0 +1,108 @@
+* 인코딩
+
+ ASCII ( 미국 위주의 인코딩 방식 )
+  -> America Standard Code ~
+  -> 128개
+ ISO - 8859 - 1
+  -> International Standard Organization 국제 표준
+  -> 256개 ( 1바이트 인코딩 )
+ UTF- 8 , 16 , 24 
+  -> 한글 3 바이트 인코딩 ( 초성 중성 종성 )
+ 
+ 
+ 
+ * java char = 2byte
+ 
+
+control + d  =한줄 지우기 
+
+ package com.ssafy.array;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class IF_TEST {
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		/*
+		 *  IF 로 제어 가능 
+		 *  	// 참인경우 수행문장
+		 *  IF ( 조건 )
+		 *  
+		 *  ELSE IF( 조건 )
+		 *  // 조건이 거짓일 때 수행
+		 *  ...
+		 *  ELSE {
+		 *  }
+		 *  
+		 *  
+		 *  ** 사용자에게 입력 받기 **
+		 *  
+		 *  입력 : bufferd input / output stream이 더 빠르다
+		 *  
+		 *  출력 : buffed output stream > print println 이 빠르다 // printf 는 느리다.
+		 *  
+		 *  알고리즘은 try catch 하지말고 throws exception
+		 */
+		
+		System.setIn(new FileInputStream("res/a.txt"));
+		/// 명령창으로 input 을 받는다.
+		Scanner scan = new Scanner(System.in);
+		
+		/// next 군들은 문자열 / 공백or엔터를 기준으로 한개의 데이터를인식
+//		scan.nextLine() => enter를 기준으로 enter 빼고 한 라인을 가져온다.
+	
+		System.out.println("이름을 입력하세요");
+		System.out.println("이름은 : " + scan.next() +"입니다");
+		
+		System.out.println("시간을 입력하세요");
+		int time  = scan.nextInt();
+	
+		if( time >=9 && time < 12) {
+			System.out.println("오전수업시간입니다.");
+		}
+		else if(time ==12 ){
+			System.out.println("점심시간입니다.");
+		}
+		else if(time>= 13 && time < 18) {
+			System.out.println("오후 수업시간 입니다.");
+		}
+		else {
+			System.out.println(" 자유 시간 입니다.");
+		}
+	
+	}
+}
+
+		
+		int[] i,j,k;
+		int a[],b,c;
+		int[] l,m[], n[][]; /// l은 1차원  m은 2차원 n은 3차원 
+		
+		int R[] = new int[100]; // 초기값은 0으로 채워짐
+		boolean visit[] = new boolean[10001];
+		
+//		for (int o = 0; o < R.length; o++) {
+//			R[o] = o +1 ;
+//			System.out.print(R[o]+ " ");
+//		} // for 를 돌려서 배열값을 할당.. 해주어야한다.
+		// stack heap method -> java의 메모리 3공간
+		// stack에 있는 변수로 heap에 접근 
+		// heap은 복잡하니.. stack에 저장하자.
+		// heap에 자주 안가는 방식으로 코딩하자.
+		
+		int array_1[] = new int[3];
+		array_1[1] = 2;
+		
+		for (int o = 0, len = array_1.length; o <len ; o++) {
+			System.out.println(array_1[o]);
+		}
+		
+	}
+
+그래프 1 개 + 시뮬 
+과제 : 중간 값 swea 찾기 ( 2063 )
+그래비티 - > 실제 낙하 시켜보기 / 시뮬 + 탐색 
+
+ 
